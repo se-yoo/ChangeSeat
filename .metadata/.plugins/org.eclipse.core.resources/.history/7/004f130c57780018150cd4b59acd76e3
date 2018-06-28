@@ -1,0 +1,51 @@
+@CHARSET "UTF-8";
+@font-face{
+	font-family:yangFont;
+	src:url('yangfont05.ttf') format('truetype');
+}
+@font-face{
+	font-family:Nanum;
+	src:url('NanumBarunGothicLight.ttf') format('truetype');
+}
+body{
+	text-align:center;
+	font-size:1.2em;
+}
+#logout{
+	font-family:Nanum;
+}
+p{
+	font-size:1.3em;
+	line-height:2em;
+	color:white;
+}
+span{
+	font-weight:bold;
+  	text-shadow: 1px 1px rgba(0, 0, 0, 0.38),2px 2px rgba(0, 0, 0, 0.38);
+}
+button{
+	width:12%;
+	height:2em;
+	background-color:#21a770;
+	color:white;
+	font-family:yangFont;
+	font-size:2em;
+	border:0px;
+	border-radius:5px;
+}
+button:hover{
+	background-color:white;
+	color:#21a770;
+	box-shadow: 2px 2px 15px gray;
+}
+.header { 
+  font-family: yangFont;
+  color:white;
+  font-size:7em;
+  margin-top:13%;
+  margin-bottom:2%;
+  text-align:center; 
+  cursor: default;
+  transition: all .4s ease-in-out;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.38);
+}

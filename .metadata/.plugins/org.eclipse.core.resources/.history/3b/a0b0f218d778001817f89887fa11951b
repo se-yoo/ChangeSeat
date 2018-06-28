@@ -1,0 +1,58 @@
+@CHARSET "UTF-8";
+@font-face{
+	font-family:yangFont;
+	src:url('yangfont05.ttf') format('truetype');
+}
+@font-face{
+	font-family:Nanum;
+	src:url('NanumBarunGothicLight.ttf') format('truetype');
+}
+body{
+	text-align:center;
+	font-size:1.1em;
+	color:white;
+}
+form{
+	margin-top:5%;
+}
+input[type='button']{
+	width:5%;
+	height:1em;
+	background-color:#21a770;
+	color:white;
+	font-family:yangFont;
+	font-size:1.2em;
+	border:0px;
+	border-radius:5px;
+	margin-left:1%;
+}
+input[type='button']:hover{
+	background-color:white;
+	color:#21a770;
+	box-shadow: 2px 2px 5px gray;
+}
+#tableBox{
+	text-align:center;
+	margin:2%;
+}
+table{
+	width:55%;
+	margin:auto;
+}
+td{
+	padding:4% 0%;
+}
+span{
+	font-size:1.3em;
+	font-weight:bold;
+	text-shadow: -2px 1px 0 #f4a391, -1px 1px 0 #f4a391, -2px -1px 0 #f4a391,
+		-1px -1px 0 #f4a391, 0px 0px 0 #f4a391, 1px 1px 0 #f4a391, 2px 1px 0
+		#f4a391, 1px -1px 0 #f4a391, 2px -1px 0 #f4a391;
+}
+input[type='number']{
+	width:50px;
+	margin-left:1%;
+}
+.desk{
+	background-color:#edd5ab;
+}

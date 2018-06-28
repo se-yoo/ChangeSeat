@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8">
+<title></title>
+</head>
+<body>
+	<%
+	request.setCharacterEncoding("UTF-8");
+	String id = request.getParameter("username");
+	String pw=request.getParameter("password");
+	String pw2=request.getParameter("password2");
+	
+	if(pw.equals(pw2)){
+		
+	}else{
+		out.println("<script>alert('입력한 비밀번호와 비밀번호 확인이 일치하지 않습니다')</script>");
+		%><meta http-equiv='refresh' content='0; url=signUp.jsp'><%
+	}
+	%>
+</body>
+</html>

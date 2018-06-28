@@ -1,0 +1,81 @@
+@CHARSET "UTF-8";
+
+@font-face {
+	font-family: yangFont;
+	src: url('yangfont05.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: Nanum;
+	src: url('NanumBarunGothicLight.ttf') format('truetype');
+}
+
+body {
+	text-align: center;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+	font-family: Nanum;
+}
+
+#minusButton, #plusButton {
+	background-color: #f4a391;
+	color: white;
+	border: 1px solid white;
+	border-radius: 6%;
+	text-weight: lighter;
+	cursor: pointer;
+	padding:0.3% 1.2%;
+	font-size:2em;
+	margin:1%;
+}
+
+.value {
+	display: inline-block;
+	color:white;
+	font-size:3em;
+	font-weight:bold;
+}
+#container{
+	margin-top:5%;
+	margin-bottom:2%;
+	text-align:right;
+}
+#container2{
+	display:inline-block;
+	width:70%;
+	text-align:left;
+	color:white;
+}
+.one{
+	display:inline-block;
+	padding:1% 2%;
+	width:29%;
+	text-align:right;
+}
+span{
+	font-size:3em;
+	font-weight:bold;
+	text-shadow: -2px 1px 0 #da8876, -1px 1px 0 #da8876, -2px -1px 0 #da8876,
+		-1px -1px 0 #da8876, 0px 0px 0 #da8876, 1px 1px 0 #da8876, 2px 1px 0
+		#da8876, 1px -1px 0 #da8876, 2px -1px 0 #da8876;
+	margin-right:2%;
+}
+input{
+	margin-left:2%;
+}
+input[type='checkbox']:checked + label{
+	font-weight:bold;
+	text-shadow: 0px 0px 0 #21a770, 1px 1px 0 #21a770, 2px 1px 0 #21a770;
+}
+input[type='button']{
+	width:5%;
+	height:1.5em;
+	background-color:#21a770;
+	color:white;
+	font-family:yangFont;
+	font-size:1.2em;
+	border:0px;
+	border-radius:5px;
+	margin:0% 20%;
+}

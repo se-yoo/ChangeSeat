@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8">
+<title></title>
+</head>
+<body>
+	<%
+	request.setCharacterEncoding("UTF-8");
+	String id = request.getParameter("username");
+	String pw=request.getParameter("password");
+	String pw2=request.getParameter("password2");
+	
+	if(pw.equals(pw2)){
+		try{
+			String filePath = application.getRealPath("/WEB-INF/weekly.txt");
+			writer=new PrintWriter(filePath);
+			BufferedWriter bw=new BufferedWriter(writer);
+			
+			for(int i=0;i<6;i++){
+				saveContent=date[i]+"\t"+duty[i]+"\t"+content[i]+"\t"+homework[i]+"\t"+teacher[i];
+				bw.write(saveContent);
+				bw.newLine();
+			}
+			
+			bw.close();
+			writer.flush();
+		}catch(Exception e){
+			out.println("오류 발생");
+		}
+	}else{
+		out.println("<script>alert('입력한 비밀번호와 비밀번호 확인이 일치하지 않습니다')</script>");
+		%><meta http-equiv='refresh' content='0; url=signUp.jsp'><%
+	}
+	%>
+</body>
+</html>

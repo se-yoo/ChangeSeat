@@ -1,0 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8">
+<title></title>
+ <link rel="stylesheet" href="changeIndexStyle.css">
+</head>
+<body>
+	<h2 class="header" style="font-size:5em;line-height:1.3em;">로그인 후 이용<br>가능한 서비스 입니다</h2>
+	<a href="login.jsp"><button>LOGIN</button></a>
+</body>

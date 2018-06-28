@@ -1,0 +1,86 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8">
+<title></title>
+<script src="jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="changeStyle.css">
+<script>
+	function changeTable() {
+		var cnt = document.getElementById("student").value;
+		if (cnt > 40 || cnt < 2) {
+			alert("2~40명만 입력가능합니다 죄송합니다");
+		} else {
+			var num = [ 1, 2 ];
+			num.length = cnt;
+			for (i = 0; i < cnt; i++) {
+				num[i] = i + 1;
+			}
+			for (i = 0; i < 100; i++) {
+				var randNum1 = Math.floor(Math.random() * cnt);
+				var randNum2 = Math.floor(Math.random() * cnt);
+				var tmp = num[randNum1];
+				num[randNum1] = num[randNum2];
+				num[randNum2] = tmp;
+			}
+			if(cnt<21){
+				$("table").css("height","0");
+				$("td").css("padding","8% 0%");
+			}
+			result = "<table border='0' cellpadding='10' cellspacing='5'>";
+			var row = Math.ceil(cnt / 4);
+			var a = 0;
+
+			for (i = 0; i < row; i++) {
+				result += "<tr>";
+				for (j = 0; j < 5; j++) {
+					if (a > cnt - 1) {
+						result += "</tr>";
+						break;
+					}
+					if (j == 2)
+						result += "<td width='3%' class='empty'></td>";
+					else
+						result += "<td width='24%' class='desk'><span>"
+								+ num[a++] + "</span> 번</td>";
+				}
+				result += "</tr>";
+			}
+			result += "</table>";
+			document.getElementById("tableBox").innerHTML = result;
+		}
+	}
+</script>
+</head>
+<body>
+	<form>
+		인원 수 <input type="number" name="student" id="student" value="20"
+			pattern="[0-9]+"> <input type="button" value="자리바꾸기"
+			onclick="changeTable()">
+	</form>
+	<div id="tableBox">
+		<table border="0" cellpadding="10" cellspacing="5">
+			<%
+				int[] num = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+				int a = 0;
+				for (int i = 0; i < 5; i++) {
+			%>
+			<tr>
+				<%
+					for (int j = 0; j < 5; j++) {
+							if (j == 2)
+								out.println("<td width='3%' class='empty'></td>");
+							else
+								out.println("<td width='24%' class='desk'><span>" + num[a++] + "</span> 번</td>");
+						}
+				%>
+			</tr>
+			<%
+				}
+			%>
+		</table>
+	</div>
+</body>
+</html>
